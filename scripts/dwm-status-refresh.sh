@@ -44,7 +44,7 @@ print_volume() {
 	then
 		echo -e "M ${volume}%"
 	else
-		echo -e "\uE05D ${volume}%"
+		echo -e "🔊 ${volume}%"
 	fi
 }
 
