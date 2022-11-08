@@ -42,7 +42,7 @@ print_volume() {
 	
 	if amixer -c 0 get Master | grep -q off
 	then
-		echo -e "M ${volume}%"
+		echo -e "🔇 ${volume}%"
 	else
 		echo -e "🔊 ${volume}%"
 	fi
@@ -140,7 +140,7 @@ get_bytes
 vel_recv=$(get_velocity $received_bytes $old_received_bytes $now)
 vel_trans=$(get_velocity $transmitted_bytes $old_transmitted_bytes $now)
 
-xsetroot -name "  💿 $(print_mem)M | d:$vel_recv u:$vel_trans | $(print_volume) | $(print_bat) | $(show_record) $(print_date) "
+xsetroot -name "💿 $(print_mem)M | ⬆$vel_recv ⬇$vel_trans | $(print_volume) | $(print_bat) | 🕘 $(print_date) "
 
 # Update old values to perform new calculations
 old_received_bytes=$received_bytes
