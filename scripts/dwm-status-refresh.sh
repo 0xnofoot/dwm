@@ -104,7 +104,7 @@ print_bat(){
 }
 
 print_date(){
-	date -u '+%H:%M'
+	date '+%H:%M'
 }
 
 show_record(){
