@@ -3,7 +3,7 @@
 sh $DWM_HOME/scripts/dualmon.sh
 sh $DWM_HOME/scripts/dwm-status.sh &
 sh $DWM_HOME/scripts/wp-autochange.sh &
-picom -b
+picom --experimental-backends --config $PICOM_HOME/picom.conf & 
 sh $DWM_HOME/scripts/tap-to-click.sh &
 sh $DWM_HOME/scripts/inverse-scroll.sh &
 nm-applet &
