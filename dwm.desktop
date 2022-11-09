@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Dwm
+Comment=Dynamic window manager
+Exec=dwm
+TryExec=dwm
+Icon=dwm
+Type=Xsession
+X-GDM-SessionRegisters=true
