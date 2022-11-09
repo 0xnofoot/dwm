@@ -53,6 +53,7 @@ static const Rule rules[] = {
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
 	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
+	{ "Edge Dev",  NULL,       NULL,       1 << 8,       0,           -1 },
 };
 
 /* layout(s) */
@@ -86,6 +87,7 @@ static const char *termcmd[]  = { "st", NULL };
 static const char scratchpadname[] = "scratchpad";
 static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "80x24", NULL };
 static const char *screenshotcmd[] = { "flameshot", "gui", NULL };
+static const char *browsercmd[] = { "microsoft-edge-dev", NULL };
 
 /* customize commads */
 static const char *upvol[]   = { "/home/nofoot/App/suckless/dwm/scripts/vol-up.sh",  NULL };
@@ -98,6 +100,7 @@ static const char *suspendcmd[]  = { "/home/nofoot/App/suckless/dwm/scripts/susp
 static Key keys[] = {
 	/* modifier            key                      function        argument */
 	{ MODKEY,              XK_s,                    spawn,          {.v = dmenucmd } },
+	{ MODKEY|ShiftMask,    XK_s,                    spawn,          {.v = browsercmd } },
 	{ MODKEY,              XK_Return,               spawn,          {.v = termcmd } },
 	{ MODKEY,              XK_apostrophe,           togglescratch,  {.v = scratchpadcmd } },
 
