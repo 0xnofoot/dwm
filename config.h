@@ -17,10 +17,10 @@ static const int smartgaps          = 1;        /* 1 means no outer gap when the
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 0;        /* 0 means bottom bar */
 static const Bool viewontag         = True;     /* Switch view on tag switch */
-static const char *fonts[]          = { "SauceCodePro Nerd Font Mono:size=20",
-					"JoyPixels:pixelsize=20:type=Regular:antialias=true:autohint=true",
-					"FuraMono Nerd Font:pixelsize=20:type=Regular:antialias=true:autohint=true",
-					"WenQuanYi Bitmap Song:pixelsize=20:type=Regular:antialias=true:autohint=true"
+static const char *fonts[]          = { "SauceCodePro Nerd Font Mono:size=18",
+					"JoyPixels:pixelsize=18:type=Regular:antialias=true:autohint=true",
+					"FuraMono Nerd Font:pixelsize=18:type=Regular:antialias=true:autohint=true",
+					"WenQuanYi Bitmap Song:pixelsize=80:type=Regular:antialias=true:autohint=true"
 					};
 static const char dmenufont[]       = "SauceCodePro Nerd Font Mono:size=20";
 static const char col_gray1[]       = "#222222";
@@ -85,7 +85,7 @@ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont,
 static const char *termcmd[]  = { "st", NULL };
 
 static const char scratchpadname[] = "scratchpad";
-static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "80x24", NULL };
+static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "82x24", NULL };
 static const char *screenshotcmd[] = { "flameshot", "gui", NULL };
 static const char *browsercmd[] = { "edge", NULL };
 
