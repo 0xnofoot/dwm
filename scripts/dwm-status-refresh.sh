@@ -25,9 +25,9 @@ function get_velocity {
 	velKB=$(echo "1000000000*($value-$old_value)/1024/$timediff" | bc)
 	if test "$velKB" -gt 1024
 	then
-		echo $(echo "scale=2; $velKB/1024" | bc)MB/s
+        echo $(echo "scale=2; $velKB/1024" | bc)MB/s
 	else
-		echo ${velKB}KB/s
+        echo ${velKB}KB/s
 	fi
 }
 
@@ -42,9 +42,9 @@ print_volume() {
 	
 	if amixer -c 0 get Master | grep -q off
 	then
-		echo -e "🔇 ${volume}%"
+        echo -e "ﱝ ${volume}%"
 	else
-		echo -e "🔊 ${volume}%"
+        echo -e " ${volume}%"
 	fi
 }
 
@@ -77,9 +77,9 @@ get_battery_charging_status() {
 
 	if $(acpi -b | grep --quiet Discharging)
 	then
-		echo "🔋";
+        echo "🔋";
 	else # acpi can give Unknown or Charging if charging, https://unix.stackexchange.com/questions/203741/lenovo-t440s-battery-status-unknown-but-charging
-		echo "🔌";
+        echo "🔌";
 	fi
 }
 
@@ -91,13 +91,13 @@ print_bat(){
 	#charge="$(awk '{ sum += $1 } END { print sum }' /sys/class/power_supply/BAT*/capacity)%"
 	#if test -z "$onl"
 	#then
-		## suspend when we close the lid
-		##systemctl --user stop inhibit-lid-sleep-on-battery.service
-		#echo -e "${charge}"
+        ## suspend when we close the lid
+        ##systemctl --user stop inhibit-lid-sleep-on-battery.service
+        #echo -e "${charge}"
 	#else
-		## On mains! no need to suspend
-		##systemctl --user start inhibit-lid-sleep-on-battery.service
-		#echo -e "${charge}"
+        ## On mains! no need to suspend
+        ##systemctl --user start inhibit-lid-sleep-on-battery.service
+        #echo -e "${charge}"
 	#fi
 	#echo "$(get_battery_charging_status) $(get_battery_combined_percent)%, $(get_time_until_charged )";
 	echo "$(get_battery_charging_status) $(get_battery_combined_percent)%";
@@ -140,7 +140,7 @@ get_bytes
 vel_recv=$(get_velocity $received_bytes $old_received_bytes $now)
 vel_trans=$(get_velocity $transmitted_bytes $old_transmitted_bytes $now)
 
-xsetroot -name "💿 $(print_mem)M | ⬆$vel_recv ⬇$vel_trans | $(print_volume) | $(print_bat) | 🕘 $(print_date) "
+xsetroot -name "💿 $(print_mem)M |  $vel_recv  $vel_trans | $(print_volume) | $(print_bat) | 神 $(print_date) "
 
 # Update old values to perform new calculations
 old_received_bytes=$received_bytes

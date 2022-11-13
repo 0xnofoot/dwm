@@ -17,11 +17,10 @@ static const int smartgaps          = 1;        /* 1 means no outer gap when the
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 0;        /* 0 means bottom bar */
 static const Bool viewontag         = True;     /* Switch view on tag switch */
-static const char *fonts[]          = { "SauceCodePro Nerd Font Mono:size=18",
-					"JoyPixels:pixelsize=18:type=Regular:antialias=true:autohint=true",
-					"FuraMono Nerd Font:pixelsize=18:type=Regular:antialias=true:autohint=true",
-					"WenQuanYi Bitmap Song:pixelsize=80:type=Regular:antialias=true:autohint=true"
-					};
+
+static const char *fonts[]          = { 
+                    "FuraMono Nerd Font:pixelsize=24:type=Regular:antialias=true:autohint=true"
+                    };
 static const char dmenufont[]       = "SauceCodePro Nerd Font Mono:size=20";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
