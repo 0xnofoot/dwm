@@ -18,7 +18,7 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 0;        /* 0 means bottom bar */
 static const Bool viewontag         = True;     /* Switch view on tag switch */
 
-static const char *fonts[]          = { 
+static const char *fonts[]          = {
                     "FuraMono Nerd Font:pixelsize=24:type=Regular:antialias=true:autohint=true"
                     };
 static const char dmenufont[]       = "SauceCodePro Nerd Font Mono:size=20";
