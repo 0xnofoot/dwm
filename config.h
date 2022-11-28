@@ -87,6 +87,7 @@ static const char scratchpadname[] = "scratchpad";
 static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "82x24", NULL };
 static const char *screenshotcmd[] = { "flameshot", "gui", NULL };
 static const char *browsercmd[] = { "edge", NULL };
+static const char *rangercmd[] = { "st", "ranger", NULL };
 
 /* customize commads */
 static const char *upvol[]   = { "/home/nofoot/App/suckless/dwm/scripts/vol-up.sh",  NULL };
@@ -100,6 +101,7 @@ static Key keys[] = {
 	/* modifier            key                      function        argument */
 	{ MODKEY,              XK_s,                    spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,    XK_s,                    spawn,          {.v = browsercmd } },
+	{ MODKEY|ShiftMask,    XK_r,                    spawn,          {.v = rangercmd } },
 	{ MODKEY,              XK_Return,               spawn,          {.v = termcmd } },
 	{ MODKEY,              XK_apostrophe,           togglescratch,  {.v = scratchpadcmd } },
 
