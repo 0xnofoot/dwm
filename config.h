@@ -95,6 +95,7 @@ static const char *downvol[] = { "/home/nofoot/App/suckless/dwm/scripts/vol-down
 static const char *mutevol[] = { "/home/nofoot/App/suckless/dwm/scripts/vol-toggle.sh",  NULL };
 static const char *wpcmd[]  = { "/home/nofoot/App/suckless/dwm/scripts/wp-change.sh", NULL };
 static const char *suspendcmd[]  = { "/home/nofoot/App/suckless/dwm/scripts/suspend.sh", NULL };
+static const char *sleepcmd[]  = { "/home/nofoot/App/suckless/dwm/scripts/sleep.sh", NULL };
 
 
 static Key keys[] = {
@@ -154,6 +155,7 @@ static Key keys[] = {
 	TAGKEYS(               XK_9,                      8)
 
 	{ MODKEY|ControlMask|ShiftMask,  XK_q,      quit,           {0} },
+	{ MODKEY|ControlMask|ShiftMask,  XK_p,      spawn,          {.v = sleepcmd } },
 };
 
 /* button definitions */
